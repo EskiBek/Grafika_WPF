@@ -1,0 +1,29 @@
+﻿<Window x:Class="grafika_kartkowka.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:grafika_kartkowka"
+        mc:Ignorable="d"
+        Title="Grafika w WPF - kartkowka 04.10.2024" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Source="start.png" Grid.Column="1" x:Name="zdjecieImage"></Image>
+        <Button Click="poprzedniBut_Click" Width="100">
+            <Image Source="poprzedni.png"></Image>
+        </Button>
+        <Button Click="nastepnyBut_Click" Width="100" Grid.Column="2">
+            <Image Source="nastepny.png"></Image>
+        </Button>
+        <TextBox x:Name="edytujOpis" Grid.Column="1" Grid.Row="1" Height="100" VerticalAlignment="Top"></TextBox>
+        <Button Click="zatwierdzNowyOpisBut_Click" Width="100" Height="50" Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom">Zatwierdź</Button>
+    </Grid>
+</Window>
